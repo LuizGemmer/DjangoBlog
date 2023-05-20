@@ -1,8 +1,14 @@
 {% extends 'blogApp/base.html' %}
 {% block content %}
-
     {% for post in posts %}
-        <h2>{{ post.text }}</h2>
-    {% endfor %}
+        <div class="d-flex flex-column p-3 border post-item">
+            <!-- Author -->
+            {{ post.text }}
+            {% if post.media %}
 
+            <img src="{{ post.media.url }}" alt="">
+
+            {% endif %}
+        </div>
+    {% endfor %}
 {% endblock content %}

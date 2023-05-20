@@ -1,0 +1,4 @@
+.post-item:hover{
+    background-color: var(--bs-tertiary-bg);
+    cursor: pointer;
+}
